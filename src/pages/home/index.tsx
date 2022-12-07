@@ -13,6 +13,13 @@ export default function Home() {
           With Legacy Wallet Adapter example
         </button>
       </Link>
+      <a
+        href="https://morphiswallet.com/"
+        target="_blank"
+        className="fixed bottom-4 text-[#c4c4c4]"
+      >
+        {`Morphis Labs https://morphiswallet.com/`}
+      </a>
     </div>
   );
 }
