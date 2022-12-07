@@ -76,26 +76,24 @@ export default function WalletConnect() {
                 supportedWallets.length === 1 ? "" : "s"
               }`}
             </div>
-            {supportedWallets.map((wallet) => {
-              return (
-                <div
-                  key={wallet.adapter.name}
-                  className="flex items-center text-center my-2 px-3 py-3 rounded-md hover:bg-gray-300 cursor-pointer"
-                  onClick={() => onConnect(wallet.adapter.name)}
-                >
-                  <img
-                    src={
-                      wallet.adapter.name !== "Sui Wallet"
-                        ? // @ts-ignore
-                          wallet.adapter?.icon || "https://placeholder.com/"
-                        : "https://lh3.googleusercontent.com/SSC3XbDl5y058Dw5lxRqDSoehs26WQqe3cfmBO8hbNOuU8cIxKwT3CM7VD1nGdgbnNbJU7NUq2nGL13mElALRZYC=w128-h128-e365-rj-sc0x00ffffff"
-                    }
-                    className="w-8"
-                  />
-                  <div className="text-bold ml-3">{wallet.adapter.name}</div>
-                </div>
-              );
-            })}
+            {supportedWallets.map((wallet) => (
+              <div
+                key={wallet.adapter.name}
+                className="flex items-center text-center my-2 px-3 py-3 rounded-md hover:bg-gray-300 cursor-pointer"
+                onClick={() => onConnect(wallet.adapter.name)}
+              >
+                <img
+                  src={
+                    wallet.adapter.name !== "Sui Wallet"
+                      ? // @ts-ignore
+                        wallet.adapter?.icon || "https://placeholder.com/"
+                      : "https://lh3.googleusercontent.com/SSC3XbDl5y058Dw5lxRqDSoehs26WQqe3cfmBO8hbNOuU8cIxKwT3CM7VD1nGdgbnNbJU7NUq2nGL13mElALRZYC=w128-h128-e365-rj-sc0x00ffffff"
+                  }
+                  className="w-8"
+                />
+                <div className="text-bold ml-3">{wallet.adapter.name}</div>
+              </div>
+            ))}
           </div>
           <div
             className="fixed inset-0 bg-black opacity-50 z-[1010]"

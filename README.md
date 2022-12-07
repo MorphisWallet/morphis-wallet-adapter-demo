@@ -1,9 +1,10 @@
 # Morphis Wallet Adapter Demo
 
 ### Before we start
+
 There're ways to integrate your dApp with the wallet adapters. Here're some demo to make it easy for you to do this.
 
-### 1. Use Sui Wallet Kit (Hight recommended)
+### 1. Use Sui Wallet Kit (Highly recommended)
 
 Sui Wallet Kit is a library that makes it easy to connect your dApp to Sui wallets. It wraps the underlying Sui Wallet Adapters and comes pre-configured with sane defaults.
 
@@ -97,5 +98,52 @@ The following wallets are known to work with the Wallet Standard:
 
 ### 2. Use Legacy Sui Wallet Provider and Morphis Wallet Adapter
 
-Since @mysten/wallet-adapter-react@^3.0.0, it introduce new wallet adapter based on the Wallet Standard. This wallet adapter automatically detects wallets that adhere to the standard interface. However, if you still use <@mysten/wallet-adapter-react@^3.0.0, you have to install Morphis Wallet Adapter and put it into the provider.
+Since @mysten/wallet-adapter-react@^3.0.0, the wallet adapter automatically detects wallets that adhere to the standard interface by Wallet Standard. However, if you still use legacy packages like @mysten/wallet-adapter-react@^2.0.0 or ealier versions, you have to install Morphis Wallet Adapter and put it into the provider.
 
+#### Getting started
+
+To get started in a React application, you can install the following packages:
+
+```bash
+npm install @morphis-wallet/morphis-wallet-adapter
+```
+
+At the root of your application, you can then set up the wallet kit provider:
+
+```tsx
+import { Wallet, WalletProvider } from "@mysten/wallet-adapter-react-2.0.0";
+import { MorphisWalletAdapter } from "@morphis-wallet/morphis-wallet-adapter";
+
+export default function App() {
+  return (
+    <WalletProvider
+      supportedWallets={[{ adapter: new MorphisWalletAdapter() } as Wallet]}
+    >
+      <WithLegacyWalletAdapter />
+    </WalletProvider>
+  );
+}
+```
+
+Then in your components, use the hook `useWallet` to get the wallet information and methods.
+
+```
+import { useWallet } from "@mysten/wallet-adapter-react-2.0.0";
+
+export default function Page() {
+  const { supportedWallets, connect } = useWallet();
+
+  return (
+    <div>
+      {supportedWallets.map((wallet) => (
+        <div
+          key={wallet.adapter.name}
+          onClick={() => connect(wallet.adapter.name)}
+        >
+          {wallet.adapter.name}
+        </div>
+      ))}
+    </div>
+  )
+}
+```
