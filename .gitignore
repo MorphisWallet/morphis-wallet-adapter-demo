@@ -145,3 +145,6 @@ sftp-config.json
 
 # web-ext artifacts
 web-ext-artifacts
+
+# build artifacts
+dist/
