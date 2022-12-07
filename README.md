@@ -95,4 +95,7 @@ The following wallets are known to work with the Wallet Standard:
 - **[Ethos Wallet](https://chrome.google.com/webstore/detail/ethos-wallet/mcbigmjiafegjnnogedioegffbooigli)**
 - **[Suiet Wallet](https://suiet.app/)**
 
-### 2. Use Legacy Sui Wallet Provider and Morphis Wallet Adapter 
+### 2. Use Legacy Sui Wallet Provider and Morphis Wallet Adapter
+
+Since @mysten/wallet-adapter-react@^3.0.0, it introduce new wallet adapter based on the Wallet Standard. This wallet adapter automatically detects wallets that adhere to the standard interface. However, if you still use <@mysten/wallet-adapter-react@^3.0.0, you have to install Morphis Wallet Adapter and put it into the provider.
+

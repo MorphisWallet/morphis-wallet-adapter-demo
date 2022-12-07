@@ -1,5 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { WalletKitProvider } from "@mysten/wallet-kit";
+import {
+  Wallet,
+  WalletAdapter,
+  WalletProvider,
+} from "@mysten/wallet-adapter-react-2.0.0";
 
 import Home from "./pages/home";
 import WithWalletKit from "./pages/with_wallet_kit";
