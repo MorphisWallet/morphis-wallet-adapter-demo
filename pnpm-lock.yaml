@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@morphis-wallet/morphis-wallet-adapter': ^0.0.1
+  '@morphis-wallet/morphis-wallet-adapter': ^0.0.2
   '@mysten/sui.js-0.11.0': npm:@mysten/sui.js@0.11.0
   '@mysten/wallet-adapter-react-2.0.0': npm:@mysten/wallet-adapter-react@^2.0.0
   '@mysten/wallet-kit': ^0.1.0
@@ -19,7 +19,7 @@ specifiers:
   vite: ^3.2.3
 
 dependencies:
-  '@morphis-wallet/morphis-wallet-adapter': 0.0.1
+  '@morphis-wallet/morphis-wallet-adapter': 0.0.2
   '@mysten/sui.js-0.11.0': /@mysten/sui.js/0.11.0
   '@mysten/wallet-adapter-react-2.0.0': /@mysten/wallet-adapter-react/2.0.0_biqbaboplfbrettd7655fr4n2y
   '@mysten/wallet-kit': 0.1.0_ib3m5ricvtkl2cll7qpr2f6lvq
@@ -370,8 +370,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@morphis-wallet/morphis-wallet-adapter/0.0.1:
-    resolution: {integrity: sha512-Yt1hYZ28ZaoSUyN8jAWCCOb8y86IOau0lLYLb8LSFeWBsNK1SJLdJxHjahUlpxK3NX6IjcrrHYnNP4NC70qYjA==}
+  /@morphis-wallet/morphis-wallet-adapter/0.0.2:
+    resolution: {integrity: sha512-e+6VH/VQJiI/SRaThJtxlXPSecMM0y6dCUg63aMb7KEPAETsy91wlsNjOKFfxhZc+2o3v/rjVdyMaf/jNXwvpQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@mysten/sui.js': 0.18.0
