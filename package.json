@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@morphis-wallet/morphis-wallet-adapter": "^0.0.3",
-    "@mysten/sui.js-0.11.0": "npm:@mysten/sui.js@0.29.1",
-    "@mysten/wallet-adapter-react-2.0.0": "npm:@mysten/wallet-adapter-react@^11.0.0",
+    "@morphis-wallet/morphis-wallet-adapter": "^0.0.4",
+    "@mysten/sui.js": "npm:@mysten/sui.js@0.20.0",
+    "@mysten/wallet-adapter-react": "npm:@mysten/wallet-adapter-react@^11.0.0",
     "@mysten/wallet-kit": "^0.3.0",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
