@@ -1,9 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { WalletKitProvider } from "@mysten/wallet-kit";
-import {
-  Wallet,
-  WalletProvider,
-} from "@mysten/wallet-adapter-react-2.0.0";
+import { WalletProvider } from "@mysten/wallet-adapter-react-2.0.0";
 import { MorphisWalletAdapter } from "@morphis-wallet/morphis-wallet-adapter";
 
 import Home from "./pages/home";
@@ -26,9 +23,7 @@ const router = createBrowserRouter([
   {
     path: "with-legacy-wallet-adapter",
     element: (
-      <WalletProvider
-        supportedWallets={[{ adapter: new MorphisWalletAdapter() } as Wallet]}
-      >
+      <WalletProvider adapters={[new MorphisWalletAdapter()]}>
         <WithLegacyWalletAdapter />
       </WalletProvider>
     ),

@@ -5,8 +5,8 @@ export default function WalletConnect() {
   const {
     select,
     wallet,
+    wallets,
     getAccounts,
-    supportedWallets,
     disconnect,
     connected,
     connecting,
@@ -72,26 +72,26 @@ export default function WalletConnect() {
             </span>
             <p className="text-center">Connect Wallet</p>
             <div className="text-bolder mb-6 text-sm text-rose-500">
-              {`Detected ${supportedWallets.length} wallet${
-                supportedWallets.length === 1 ? "" : "s"
+              {`Detected ${wallets.length} wallet${
+                wallets.length === 1 ? "" : "s"
               }`}
             </div>
-            {supportedWallets.map((wallet) => (
+            {wallets.map((wallet) => (
               <div
-                key={wallet.adapter.name}
+                key={wallet.name}
                 className="flex items-center text-center my-2 px-3 py-3 rounded-md hover:bg-gray-300 cursor-pointer"
-                onClick={() => onConnect(wallet.adapter.name)}
+                onClick={() => onConnect(wallet.name)}
               >
                 <img
                   src={
-                    wallet.adapter.name !== "Sui Wallet"
+                    wallet.name !== "Sui Wallet"
                       ? // @ts-ignore
                         wallet.adapter?.icon || "https://placeholder.com/"
                       : "https://lh3.googleusercontent.com/SSC3XbDl5y058Dw5lxRqDSoehs26WQqe3cfmBO8hbNOuU8cIxKwT3CM7VD1nGdgbnNbJU7NUq2nGL13mElALRZYC=w128-h128-e365-rj-sc0x00ffffff"
                   }
                   className="w-8"
                 />
-                <div className="text-bold ml-3">{wallet.adapter.name}</div>
+                <div className="text-bold ml-3">{wallet.name}</div>
               </div>
             ))}
           </div>
