@@ -6,7 +6,7 @@ import { MorphisIcon } from "@morphis-wallet/morphis-wallet-adapter";
 import WalletConnect from "./components/wallet_connect";
 
 export default function WithLegacyWalletAdapter() {
-  const { connected, getAccounts, executeMoveCall, wallet } = useWallet();
+  const { connected, getAccounts, signAndExecuteTransaction } = useWallet();
 
   const handleTransaction = async () => {
     if (!connected) return;
@@ -15,13 +15,16 @@ export default function WithLegacyWalletAdapter() {
       const accounts = getAccounts();
       if (!accounts) return;
 
-      executeMoveCall({
-        packageObjectId: "0x2",
-        module: "devnet_nft",
-        function: "mint",
-        typeArguments: [],
-        arguments: ["Morphis", "Morphis Icon", MorphisIcon],
-        gasBudget: 10000,
+      signAndExecuteTransaction({
+        kind: "moveCall",
+        data: {
+          packageObjectId: "0x2",
+          module: "devnet_nft",
+          function: "mint",
+          typeArguments: [],
+          arguments: ["Morphis", "Morphis Icon", MorphisIcon],
+          gasBudget: 10000,
+        },
       });
     } catch (e) {
       console.warn(e);
