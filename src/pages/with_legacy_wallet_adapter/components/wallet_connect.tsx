@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useWallet } from "@mysten/wallet-adapter-react-2.0.0";
+import { useWallet } from "@mysten/wallet-adapter-react";
 
 export default function WalletConnect() {
   const {

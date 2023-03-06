@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { WalletKitProvider } from "@mysten/wallet-kit";
-import { WalletProvider } from "@mysten/wallet-adapter-react-2.0.0";
+import { WalletProvider } from "@mysten/wallet-adapter-react";
 import { MorphisWalletAdapter } from "@morphis-wallet/morphis-wallet-adapter";
 
 import Home from "./pages/home";
