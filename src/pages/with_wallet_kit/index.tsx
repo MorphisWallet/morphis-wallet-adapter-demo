@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import cl from "classnames";
-import { ConnectButton, useWallet } from "@mysten/wallet-kit";
+import { ConnectButton, useWalletKit } from "@mysten/wallet-kit";
 
 export default function WithWalletKit() {
-  const { connected, getAccounts, signAndExecuteTransaction } = useWallet();
+  const { status, signAndExecuteTransaction } = useWalletKit();
 
   const handleTransaction = async () => {
     await signAndExecuteTransaction({
@@ -35,10 +35,10 @@ export default function WithWalletKit() {
         <h1 className="text-4xl mb-4">Wallet Kit example</h1>
         <button
           onClick={handleTransaction}
-          disabled={!connected}
+          disabled={status !== "CONNECTED"}
           className={cl([
             "bg-teal-500 hover:bg-teal-700 px-5 py-2 leading-5 rounded-full font-semibold text-white",
-            !connected &&
+            status === "CONNECTED" &&
               "bg-neutral-500 hover:bg-neutral-700 cursor-not-allowed",
           ])}
         >
