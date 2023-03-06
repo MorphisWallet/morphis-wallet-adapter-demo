@@ -111,7 +111,7 @@ npm install @morphis-wallet/morphis-wallet-adapter
 At the root of your application, you can then set up the wallet kit provider:
 
 ```tsx
-import { Wallet, WalletProvider } from "@mysten/wallet-adapter-react-2.0.0";
+import { Wallet, WalletProvider } from "@mysten/wallet-adapter-react";
 import { MorphisWalletAdapter } from "@morphis-wallet/morphis-wallet-adapter";
 
 export default function App() {
@@ -128,7 +128,7 @@ export default function App() {
 Then in your components, use the hook `useWallet` to get the wallet information and methods.
 
 ```
-import { useWallet } from "@mysten/wallet-adapter-react-2.0.0";
+import { useWallet } from "@mysten/wallet-adapter-react";
 
 export default function Page() {
   const { supportedWallets, connect } = useWallet();

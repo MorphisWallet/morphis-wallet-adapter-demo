@@ -1,9 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@morphis-wallet/morphis-wallet-adapter': ^0.0.3
-  '@mysten/sui.js-0.11.0': npm:@mysten/sui.js@0.29.1
-  '@mysten/wallet-adapter-react-2.0.0': npm:@mysten/wallet-adapter-react@^11.0.0
+  '@morphis-wallet/morphis-wallet-adapter': ^0.0.4
+  '@mysten/sui.js': npm:@mysten/sui.js@0.20.0
+  '@mysten/wallet-adapter-react': npm:@mysten/wallet-adapter-react@^11.0.0
   '@mysten/wallet-kit': ^0.3.0
   '@types/react': ^18.0.24
   '@types/react-dom': ^18.0.8
@@ -19,9 +19,9 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
-  '@morphis-wallet/morphis-wallet-adapter': 0.0.3
-  '@mysten/sui.js-0.11.0': /@mysten/sui.js/0.29.1
-  '@mysten/wallet-adapter-react-2.0.0': /@mysten/wallet-adapter-react/11.0.0_biqbaboplfbrettd7655fr4n2y
+  '@morphis-wallet/morphis-wallet-adapter': 0.0.4
+  '@mysten/sui.js': 0.20.0
+  '@mysten/wallet-adapter-react': 11.0.0_jjykacyczgkmaytewmxxfzjinu
   '@mysten/wallet-kit': 0.3.3_biqbaboplfbrettd7655fr4n2y
   classnames: 2.3.2
   react: 18.2.0
@@ -523,11 +523,11 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@morphis-wallet/morphis-wallet-adapter/0.0.3:
-    resolution: {integrity: sha512-q3spg21jUtpJJ46Efz8Q3hDRRy1CMQjjkHRpibJTsTOQpP9KOe+DuEt3Nrnw2tjsmHeYvBf7gWzscuKyGRvu+w==}
+  /@morphis-wallet/morphis-wallet-adapter/0.0.4:
+    resolution: {integrity: sha512-cvEl68Gz9V+BWC9mRMU1daHlXYqi6ymiuKw7eandXxJpoZO90MlHSzPsNohDOauyPzFmwu63HZZsK9Klqmxf4Q==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@mysten/sui.js': 0.29.1
+      '@mysten/sui.js': 0.20.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -609,13 +609,14 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@mysten/wallet-adapter-react/11.0.0_biqbaboplfbrettd7655fr4n2y:
+  /@mysten/wallet-adapter-react/11.0.0_jjykacyczgkmaytewmxxfzjinu:
     resolution: {integrity: sha512-YQfaZZEKpnpVqZoHPFlmlGawt/JRuh+jyq3hQ2quBQfT+K6N8EGsEZa0vwWUVAPWodA7b38OsiblMmHXgG/8kQ==}
     peerDependencies:
       '@mysten/sui.js': 0.20.0
       react: '*'
       react-dom: '*'
     dependencies:
+      '@mysten/sui.js': 0.20.0
       '@mysten/wallet-adapter-base': 0.3.7
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
