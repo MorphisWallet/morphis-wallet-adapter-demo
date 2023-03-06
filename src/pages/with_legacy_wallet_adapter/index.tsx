@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import cl from "classnames";
-import { useWallet } from "@mysten/wallet-adapter-react-2.0.0";
+import { useWallet } from "@mysten/wallet-adapter-react";
 import { MorphisIcon } from "@morphis-wallet/morphis-wallet-adapter";
 
 import WalletConnect from "./components/wallet_connect";
