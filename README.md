@@ -1,3 +1,6 @@
+# ⚠️⚠️ This repo is archived. Please refer to https://github.com/MorphisWallet/morphis-wallet-adapter ⚠️⚠️
+
+
 # Morphis Wallet Adapter Demo
 
 ### Before we start
